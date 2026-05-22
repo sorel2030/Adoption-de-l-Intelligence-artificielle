@@ -1,22 +1,20 @@
-#  Analyse de l'Adoption de l'IA et de l'Impact Socio-Économique
+# Analyse de l'Adoption de l'IA dans le Monde (Clustering K-Means)
 
-##  Présentation du Projet
-Ce projet a pour objectif d'analyser et de segmenter les pays selon leur niveau d'avancement, d'adoption technologique et d'impact économique lié à l'Intelligence Artificielle.
+Ce projet analyse l'impact socio-économique et technologique de l'Intelligence Artificielle à travers 62 pays. À l'aide d'un algorithme de Machine Learning, les pays ont été segmentés en différents groupes (clusters) pour identifier les dynamiques mondiales de maturité technologique.
 
-L'objectif final est de comprendre si des indicateurs macroéconomiques comme le PIB ou les gains de productivité permettent de prédire le score global de maturité en IA d'une nation.
+## Démo Interactive
+L'application est déployée en direct sur Streamlit Community Cloud : 
+👉 [Lien vers le Dashboard Interactif](https://projet-final-sci1402-64cz8chv8yod6amweechym.streamlit.app/)
 
-##  Méthodologie & Approche Data
-1. **Collecte & Nettoyage :** Fusion de 4 datasets (Global AI Index, Données de PIB, Taux d'Adoption des outils, Évolution de la productivité). Aggrégation des données pour éliminer les doublons de pays.
-2. **Gestion du Data Leakage :** Cloisonnement strict des données (`train_test_split`) avant l'étape d'imputation des valeurs manquantes.
-3. **Modélisation :** Test et évaluation d'une Régression Linéaire et d'un Random Forest Regressor.
-4. **Clustering :** Segmentation des pays en 3 profils distincts via l'algorithme K-Means après standardisation.
+## Méthodologie & Données
+- **Données :** Indicateurs macroéconomiques (PIB, taux d'adoption des outils IA, score global d'avancement, et évolution de la productivité).
+- **Méthode :** Nettoyage des données, normalisation, et application de l'algorithme **K-Means** (Scikit-Learn) pour segmenter les pays de manière optimale.
+- **Résultat clé :** Une distinction nette apparaît entre les économies moteurs (fort PIB et investissement IA massif) et les pays en transition technologique, visible sur la cartographie interactive.
 
-##  Résultats des Modèles (Performances Réelles)
-Suite à la correction de la fuite de données, les modèles prédictifs affichent des performances réalistes, démontrant que le score d'IA global dépend de facteurs plus complexes que la simple richesse économique :
-*   **Régression Linéaire :** $R^2 \approx 0.06$ | RMSE $\approx 19.86$
-*   **Random Forest :** $R^2 \approx 0.04$ | RMSE $\approx 20.16$
+## 🛠️ Technologies utilisées
+- **Python** (Pandas, NumPy, Scikit-Learn)
+- **Visualisation :** Plotly Express (Cartographie choroplèthe, graphiques de dispersion)
+- **Déploiement :** Streamlit
 
-## Technologies Utilisées
-*   **Langage :** Python (Pandas, NumPy, Scikit-Learn)
-*   **Visualisation :** Plotly Express, Streamlit
-*   **Environnement :** Google Colab, Git / GitHub
+##  Perspectives d'amélioration
+Si j'avais eu plus de temps, j'aurais intégré des données historiques sur 5 ans pour analyser l'évolution temporelle des clusters et prédire les trajectoires d'adoption des pays émergents.
